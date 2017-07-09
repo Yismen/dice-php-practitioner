@@ -19,22 +19,18 @@ function redirect($path)
     return Redirect::to($path);
 }
 
-function config($name,  $default = null)
+function config($var,  $default = null)
 {
-    $name = str_replace('.', '/', $name);
+    $array =  require 'config/app.php';
+
+    if (array_key_exists($var, $array)) {
+        return $array[$var];
+    }
+
+    return $default;
+    // $name = str_replace('.', '/', $name);
     
-    return require 'config/'.$name.'.php';
-}
-
-function str_slug($string, $separator = '-')
-{
-    $string = str_replace(' ', $separator, 
-        trim(
-            strtolower($string), ' '
-        )
-    );
-
-    return $string;
+    // return require 'config/'.$name.'.php';
 }
 
 function env($var, $default = null)
@@ -47,4 +43,15 @@ function env($var, $default = null)
 
     return $default;
 
+}
+
+function str_slug($string, $separator = '-')
+{
+    $string = str_replace(' ', $separator, 
+        trim(
+            strtolower($string), ' '
+        )
+    );
+
+    return $string;
 }

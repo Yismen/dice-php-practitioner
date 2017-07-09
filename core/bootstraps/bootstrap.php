@@ -8,7 +8,7 @@ use Core\Database\Query\Builder;
 require 'vendor/autoload.php';
 require 'core/bootstraps/helpers.php';
 
-App::bind('connection', config('app')['db_connection']);
+App::bind('connection', config('db_connection'));
 App::bind('pdo', Connection::make(App::resolve('connection')));
 
 Router::load('app/http/routes.php')

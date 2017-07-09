@@ -54,6 +54,8 @@ class Router
             return self::callAction($action[0], $action[1]);
         }
         throw new \Exception("Route {$method} - {$uri} is not defined.");
+        
+        // Exception::handle(new \Exception("Route {$method} - {$uri} is not defined."));
     }
 
     private static function callAction($controller, $method)

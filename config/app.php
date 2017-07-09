@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'env' => env('ENV', 'production'), // dev, production
+    
     'db_connection' => [
         'dbhost' => env('DB_HOST', 'localhost'),
         'dbname' => env('DB_NAME', 'test'),

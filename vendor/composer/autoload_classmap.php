@@ -19,6 +19,7 @@ return array(
     'Core\\Controller' => $baseDir . '/core/Controller.php',
     'Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
     'Core\\Database\\Query\\Builder' => $baseDir . '/core/database/Query/Builder.php',
+    'Core\\Exception' => $baseDir . '/core/Exception.php',
     'Core\\Model' => $baseDir . '/core/Model.php',
     'Core\\Model\\Queries' => $baseDir . '/core/Model/Queries.php',
     'Core\\Redirect' => $baseDir . '/core/Redirect.php',

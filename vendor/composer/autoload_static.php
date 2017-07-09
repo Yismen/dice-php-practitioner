@@ -34,6 +34,7 @@ class ComposerStaticInit5df300489fcc530309986c3ee95e2d67
         'Core\\Controller' => __DIR__ . '/../..' . '/core/Controller.php',
         'Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'Core\\Database\\Query\\Builder' => __DIR__ . '/../..' . '/core/database/Query/Builder.php',
+        'Core\\Exception' => __DIR__ . '/../..' . '/core/Exception.php',
         'Core\\Model' => __DIR__ . '/../..' . '/core/Model.php',
         'Core\\Model\\Queries' => __DIR__ . '/../..' . '/core/Model/Queries.php',
         'Core\\Redirect' => __DIR__ . '/../..' . '/core/Redirect.php',

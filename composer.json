@@ -1,0 +1,25 @@
+{
+    "name": "yismen/dice",
+    "description": "PHP Practitioner Project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yismen Jorge",
+            "email": "yismen.jorge@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload": {
+        "classmap": [
+            "./"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+        ]
+    }
+}

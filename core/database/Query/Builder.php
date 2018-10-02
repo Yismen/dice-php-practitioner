@@ -63,7 +63,6 @@ class Builder
         $this->statement->execute();
 
         return $this->statement->fetchAll(\PDO::FETCH_CLASS);
-
     }
 
     private function parseString($string)
@@ -75,7 +74,6 @@ class Builder
 
     public function raw($query)
     {
-
         $this->statement = $this->pdo->prepare($query);
 
         $this->statement->execute();
@@ -83,4 +81,3 @@ class Builder
         return $this->statement->fetchAll(\PDO::FETCH_CLASS);
     }
 }
-

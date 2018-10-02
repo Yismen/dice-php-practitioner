@@ -21,6 +21,5 @@ class Exception
     {
         throw new \Exception("Oops. Something went wrong.");
         return;
-        
     }
 }

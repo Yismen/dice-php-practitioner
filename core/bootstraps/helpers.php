@@ -19,7 +19,7 @@ function redirect($path)
     return Redirect::to($path);
 }
 
-function config($var,  $default = null)
+function config($var, $default = null)
 {
     $array =  require 'config/app.php';
 
@@ -42,14 +42,16 @@ function env($var, $default = null)
     }
 
     return $default;
-
 }
 
 function str_slug($string, $separator = '-')
 {
-    $string = str_replace(' ', $separator, 
+    $string = str_replace(
+        ' ',
+        $separator,
         trim(
-            strtolower($string), ' '
+            strtolower($string),
+            ' '
         )
     );
 

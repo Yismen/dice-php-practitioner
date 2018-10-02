@@ -12,12 +12,12 @@ class Router
     private static $instance;
 
     public function __construct()
-    {        
+    {
         // self::$instance = new self;
     }
 
     public static function load($file)
-    {   
+    {
         $router = new self;
 
         require $file;
@@ -46,7 +46,7 @@ class Router
     }
 
     public static function direct($uri, $method)
-    {        
+    {
         // dd($uri);
         if (array_key_exists($uri, self::$routes[$method])) {
             $action = explode('@', self::$routes[$method][$uri]);

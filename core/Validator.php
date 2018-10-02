@@ -11,12 +11,13 @@ class Validator
     public function make($request, $rules)
     {
         foreach ($rules as $field => $rules) {
-            $rules = explode('|',
+            $rules = explode(
+                '|',
                 trim($rules, ' ')
             );
 
             if (! array_key_exists($field, $request)) {
-                throw new \Exception("Request does not contains {$field}");                
+                throw new \Exception("Request does not contains {$field}");
             }
             
             foreach ($rules as $rule) {
@@ -66,7 +67,8 @@ class Validator
     public function required($field, $value)
     {
         return $this->assert(
-            strlen($value) > 0, [
+            strlen($value) > 0,
+            [
                 $field => "field {$field} is required."
             ]
         );
@@ -89,7 +91,7 @@ class Validator
     public function length($field, $value)
     {
         return $this->assert(
-            strlen($value) == $this->argument, 
+            strlen($value) == $this->argument,
             [
                 $field => "field {$field} should be of a exact length of {$this->argument} characters."
             ]

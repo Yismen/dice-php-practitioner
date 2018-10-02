@@ -7,8 +7,8 @@
 </head>
 <body>
 
-<?php 
+<?php
     if (! isset($navigation) || $navigation !== false) {
-        view('layouts.navigation');  
-    } 
+        view('layouts.navigation');
+    }
 ?>

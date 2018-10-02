@@ -29,7 +29,7 @@ class ClientsController extends Controller
     {
         $this->validate(Request::all(), [
             'name' => 'required|min:5'
-        ]);  
+        ]);
 
         if ($this->validator->fails()) {
             return Redirect::with(['errors' => $this->validator->errors()])

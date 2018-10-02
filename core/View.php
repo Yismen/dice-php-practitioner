@@ -15,8 +15,8 @@ class View
 
     private static function parse($name)
     {
-       $name = trim($name, '/');
+        $name = trim($name, '/');
 
-       return $name = str_replace('.', '/', $name);
+        return $name = str_replace('.', '/', $name);
     }
 }

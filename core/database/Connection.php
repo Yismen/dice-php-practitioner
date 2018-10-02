@@ -24,6 +24,5 @@ class Connection
         } catch (Exception $e) {
             die($e->getMessage());
         }
-            
     }
 }

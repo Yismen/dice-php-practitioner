@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use Core\Redirect;
+
 class Router
 {
     private static $routes = [
@@ -32,7 +34,6 @@ class Router
         self::$routes['GET'][$uri] = $controller;
 
         return $instance;
-        dd($instance);
     }
 
     public static function post($uri, $controller)
@@ -42,12 +43,10 @@ class Router
         self::$routes['POST'][$uri] = $controller;
 
         return $instance;
-        dd($instance);
     }
 
     public static function direct($uri, $method)
     {
-        // dd($uri);
         if (array_key_exists($uri, self::$routes[$method])) {
             $action = explode('@', self::$routes[$method][$uri]);
 

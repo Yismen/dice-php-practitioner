@@ -1,3 +1,4 @@
 <?php
 
-require 'core/bootstraps/bootstrap.php';
+
+require_once __DIR__.'/public/index.php';

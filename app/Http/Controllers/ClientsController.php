@@ -13,14 +13,9 @@ class ClientsController extends Controller
 
     protected $argument;
 
-    public function __construct()
-    {
-        $this->client = new Client;
-    }
-
     public function index()
     {
-        $clients = $this->client->getAll();
+        $clients = Client::getAll();
 
         return view('clients.index', compact('clients'));
     }
@@ -34,10 +29,9 @@ class ClientsController extends Controller
         if ($this->validator->fails()) {
             return Redirect::with(['errors' => $this->validator->errors()])
                 ->to('clients');
-            // redirect('clients')->with(['errors' => $this->validator->errors]);
         }
 
-        $client = $this->client->create([
+        $client = Client::create([
             'name' => Request::get('name'),
             'slug' => str_slug(Request::get('name')),
         ]);

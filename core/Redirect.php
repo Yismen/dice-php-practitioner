@@ -4,21 +4,40 @@ namespace Core;
 
 class Redirect
 {
-    public static function to($path)
+	private static $instance;
+	
+	public static $response = [
+		'data' => [],
+		'errors' => []
+	];
+	
+	private static function getInstance()
+	{
+		static::$instance = static::$instance ?: new static;
+	}
+	
+    public static function to($path = '/')
     {
-        $instance = new self;
+        static::getInstance();
 
         header('Location: '.$path);
 
-        return $instance;
+        return static::$instance;
     }
-
+	
+/**
+*
+*/
     public static function with($array)
     {
-        $instance = new self;
+        static::getInstance();
+		
+		static::$response['data'] = $array;
+		
+		if(array_key_exists('errors', $array)) {
+			static::$response['errors'] = $array['errors'];
+		}
 
-        // header('Location: '.$path);
-
-        return $instance;
+        return static::$instance;
     }
 }

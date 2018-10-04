@@ -10,26 +10,41 @@ class Model
     // implements Queries;
 
     protected $primary = 'id';
-    protected $table;
+	protected static $instance;
+    protected static $table;
 
-    protected $connection;
+    protected static $connection;
 
-    public function __construct()
+    /* public function __construct()
     {
         $this->connection = new Builder(
             App::resolve('pdo'),
             $this->table
         );
-    }
+    } */
+	
+	public static function getInstance()
+	{
+		static::$instance =  static::$instance ? static::$instance : new static;
+		
+		static::$connection = new Builder(
+            App::resolve('pdo'),
+            static::$table
+        );
+	}
+	
+	public static function getAll()
+	{
+		static::getInstance();
+		
+		return static::$connection->get();
+	}
 
-    public function create(array $request)
+    public static function create(array $request)
     {
-        $this->connection->insert($request);
-    }
-
-    public function getAll()
-    {
-        return $this->connection->get();
+		static::getInstance();
+		
+		return static::$connection->insert($request);
     }
 
     public function find($id)

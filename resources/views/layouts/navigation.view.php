@@ -48,6 +48,12 @@
                 </a>
             </div>
             <!-- /. Item -->
+            <div class="navbar-item">
+                <a class="navbar-link " href="/empleados">
+                    Empleados
+                </a>
+            </div>
+            <!-- /. Item -->
         </div>
 
         <div class="navbar-end">

@@ -24,7 +24,7 @@
 <hr>
 
 <section class="container">
-    <h1 class="is-centered">Clients</h1>
+    <header class="is-centered">Clients</header>
     <table class="table ">
         <thead>
             <tr>

@@ -1,6 +1,5 @@
 <?php view('layouts.header'); ?>
 
 
-    
-</body>
-</html>
+
+<?php view('layouts.footer'); ?>

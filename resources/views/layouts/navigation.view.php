@@ -56,7 +56,7 @@
             <!-- /. Item -->
         </div>
 
-        <div class="navbar-end">
+        <!-- <div class="navbar-end">
             <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
                 Github
             </a>
@@ -88,6 +88,6 @@
                     </a>
                 </p>
             </div>
-        </div>
+        </div> -->
     </div>
 </nav>

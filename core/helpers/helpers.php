@@ -2,13 +2,6 @@
 
 use Core\Redirect;
 
-function dd($var)
-{
-    return die(
-        var_dump($var)
-    );
-}
-
 function view($view, $data = [], $from = 'resources/views/')
 {
     return Core\View::make($view, $data, $from);
@@ -21,7 +14,7 @@ function redirect($path)
 
 function config($var, $default = null)
 {
-    $array =  require 'config/app.php';
+    $array = require 'config/app.php';
 
     if (array_key_exists($var, $array)) {
         return $array[$var];
@@ -29,13 +22,13 @@ function config($var, $default = null)
 
     return $default;
     // $name = str_replace('.', '/', $name);
-    
+
     // return require 'config/'.$name.'.php';
 }
 
 function env($var, $default = null)
 {
-    $array =  require '.env.php';
+    $array = require '.env.php';
 
     if (array_key_exists($var, $array)) {
         return $array[$var];

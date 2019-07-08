@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 use Core\Request;
 use Core\Redirect;
 use Core\Controller;
-use App\Http\Models\Empleado;
+use App\Models\Empleado;
 
 class EmpleadosController extends Controller
 {
-
     public function index()
     {
         $empleados = Empleado::getAll();
@@ -20,7 +19,7 @@ class EmpleadosController extends Controller
     public function store()
     {
         $this->validate(Request::all(), [
-            'name' => 'required|min:5'
+            'name' => 'required|min:5',
         ]);
 
         if ($this->validator->fails()) {

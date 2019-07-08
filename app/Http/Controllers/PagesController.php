@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Core\Request;
 use Core\Controller;
-use App\Http\Models\Client;
+use App\Models\Client;
 
 class PagesController extends Controller
 {
@@ -12,7 +11,7 @@ class PagesController extends Controller
 
     public function __construct()
     {
-        $this->client = new Client;
+        $this->client = new Client();
     }
 
     public function home()

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Core\Request;
 use Core\Redirect;
 use Core\Controller;
-use App\Http\Models\Client;
+use App\Models\Client;
 
 class ClientsController extends Controller
 {
@@ -23,7 +23,7 @@ class ClientsController extends Controller
     public function store()
     {
         $this->validate(Request::all(), [
-            'name' => 'required|min:5'
+            'name' => 'required|min:5',
         ]);
 
         if ($this->validator->fails()) {

@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Models;
+namespace App\Models;
 
 use Core\App;
-use Core\Database\Query\Builder;
 
 class Task
 {

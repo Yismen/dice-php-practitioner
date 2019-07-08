@@ -10,7 +10,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "symfony/polyfill-mbstring": "^1.11@dev",
+        "symfony/var-dumper": "4.4.x-dev"
+    },
 
     "autoload": {
         "classmap": [
